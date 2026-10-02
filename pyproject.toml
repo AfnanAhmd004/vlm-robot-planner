@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = ""
+version = "0.1.0"
+description = "Vision-language robot task planning with a symbolic validator, closed-loop replanning and Claude as an optional planner"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Afnan Ahmed Adil" }]
+dependencies = ["numpy", "scipy", "pillow"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["vlmplan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
